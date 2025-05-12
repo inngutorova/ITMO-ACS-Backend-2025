@@ -14,11 +14,13 @@ import commentRouter from "./routes/commentRouter";
 import reviewRouter from "./routes/reviewRouter";
 import travelTypeRouter from "./routes/travelTypeRouter";
 import mediaRouter from "./routes/mediaRouter";
+import { setupSwagger } from "./swagger";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+setupSwagger(app);
 
 app.use(express.json());
 
